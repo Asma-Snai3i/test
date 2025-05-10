@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="events.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <h1> mouse event: click</h1>
+        <p id="p1">test event handlers here</p>
+        <button id="btn1">button x</button>
+    </div>
+    <div id="div2">
+        <h1> mouse event: mouseover </h1>
+        <p id="p2">change this text when mouse hover over this div </p>
+        <p>test message here</p>
+    </div>
+    <div id="div3">
+        <h1>input event</h1>
+        <input id='input1' type="text" name="random_text" />
+        <p id="p3"></p>
+    </div>
+    <div id="div4">
+        <h1>keyboard event </h1>
+        <input id='input2' type="text" name="random_text" />
+    </div>
+</body>
+<script>
+    /*
+    let x = document.getElementById("btn1")
+    /*x.onclick = function(){
+        x.style.backgroundColor = "Black"
+    }
+    x.addEventListener("click", function(){
+        x.style.backgroundColor = "Black"
+    })
+
+    /*
+    x.onclick = function(){
+        alert("you clicked button x")
+    }
+    x.addEventListener("click", function(){
+        alert("you clicked button x")
+    })
+
+/*
+    let x1 = document.getElementById("div2")
+    let x2 = document.getElementById("p2")
+
+    x1.onmouseover = function(){
+        x2.textContent = "tahaaa + ahmed"
+    }
+    */ 
+
+    /*x1.onmouseout = function(){
+        x2.textContent = "change this text when mouse hover over this div "
+    }
+    x1.addEventListener("mouseout", function(){
+        x2.textContent = "change this text when mouse hover over this div "
+    })
+
+    // input event
+    let y = document.getElementById("input1")
+    let p3 = document.getElementById("p3")
+
+    document.getElementById("input1").oninput = function(event){
+        p3.textContent = event.target.value
+    }
+
+    // keyboard
+    let y4 = document.getElementById("input2")
+    y4.onkeydown = function(event){
+        if(event.keyCode == 13){
+            alert("you pressed Enter")
+        } 
+    }*/
+    console.log("width= ", window.innerWidth)
+    console.log("height= ", window.innerHeight)
+
+    window.addEventListener("load", function(){
+        alert("page is loaded")
+    })
+    window.addEventListener("resize", function(){
+        alert("page is resized")
+    })
+    window.addEventListener("scroll", function(){
+        let old_position = 0
+        let new_position = window.scrollY
+        if(new_position > old_position){
+            console.log("you scrolled down")
+        }else if (new_position < old_position) {
+            console.log("you scrolled up")
+        }
+    })
+
+</script>
+</html>
